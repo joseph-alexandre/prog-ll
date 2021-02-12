@@ -23,6 +23,9 @@ public class Livro {
         this.autores = autores;
     }
 
+    public Livro() {
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -74,12 +77,12 @@ public class Livro {
     @Override
     public String toString() {
         return
-                "Título: " + titulo + "\n" +
-                "ISBN: " + ISBN + "\n" +
-                "Emprestado: " + GenericUtils.formatarBoolean(emprestado) + "\n" +
-                "Estado: " + estado.getDescricao() + "\n" +
-                "Data de Lançamento: " + GenericUtils.formatarData(dataLancamento) + "\n" +
-                "Autores: " + GenericUtils.formatarListaString(autores);
+                titulo + ";" +
+                ISBN + ";" +
+                GenericUtils.formatarBoolean(emprestado) + ";" +
+                estado + ";" +
+                GenericUtils.formatarDataParaString(dataLancamento) + ";" +
+                GenericUtils.formatarListaString(autores);
     }
 
     public static void main(String[] args) {

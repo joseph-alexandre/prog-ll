@@ -1,0 +1,2 @@
+Livro1;123;Não;BOM;14/12/2020;Autor 1, Autor 2
+Livro1;123;Sim;RUIM;14/12/2020;Autor 3, Autor 4

@@ -1,6 +1,6 @@
 // Enumerador de auxílio para a criação do Livro
 
-public enum EstadoLivro {
+public enum EstadoLivro  {
 
     BOM("Bom"),
     RUIM("Ruim");

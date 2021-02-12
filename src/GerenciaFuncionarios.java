@@ -192,6 +192,24 @@ public class GerenciaFuncionarios {
         System.out.println("Listagem geral: \n");
         System.out.println(gerenciaFuncionarios);
 
+        ManipuladorGerenciaFuncionarios manipuladorGerenciaFuncionarios = new ManipuladorGerenciaFuncionarios();
+        manipuladorGerenciaFuncionarios.setDaoContratados();
+        manipuladorGerenciaFuncionarios.inserirContratados(gerenciaFuncionarios.getContratados());
+        manipuladorGerenciaFuncionarios.setDaoDemitidos();
+        manipuladorGerenciaFuncionarios.inserirDemitidos(gerenciaFuncionarios.getDemitidos());
+
+        List<Funcionario> funcionariosContratados = manipuladorGerenciaFuncionarios.lerContratados();
+        List<Funcionario> funcionariosDemitidos = manipuladorGerenciaFuncionarios.lerDemitidos();
+
+        for (Funcionario funcionario : funcionariosContratados) {
+            System.out.println("Funcionário contratado: " + funcionario.getNome());
+        }
+
+        for (Funcionario funcionario : funcionariosDemitidos) {
+            System.out.println("Funcionário demitido: " + funcionario.getNome());
+        }
+
+
     }
 
 }

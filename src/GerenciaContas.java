@@ -45,30 +45,17 @@ public class GerenciaContas {
 
 
     public static void main(String[] args) {
-        GerenciaContas gerenciaContas = new GerenciaContas();
-        System.out.println("Exemplo de criação de uma conta: \n");
-        Conta conta = gerenciaContas.criarConta("Teste");
-        System.out.println(conta);
+        Conta conta = new GerenciaContas().criarConta("João Lucas");
+        ManipuladorConta manipuladorConta = new ManipuladorConta();
 
-        System.out.println("\n-----------------------\n");
+        conta.setSaldo(3232f, true);
 
-        System.out.println("Exemplo de impressão de saldo da conta: \n");
-        gerenciaContas.imprimirSaldo(conta);
+        manipuladorConta.inserirConta(conta);
 
-        System.out.println("\n-----------------------\n");
+        Conta contaSalva = manipuladorConta.lerConta();
 
-        System.out.println("Exemplo de depósito: \n");
-        System.out.println("Saldo antes do depósito: " + conta.getSaldo());
-        gerenciaContas.depositar(conta, 1000f);
-        System.out.println("Saldo após o depósito: " + conta.getSaldo());
+        System.out.println(contaSalva);
 
-
-        System.out.println("\n-----------------------\n");
-
-        System.out.println("Exemplo de saque: \n");
-        System.out.println("Saldo antes do saque: " + conta.getSaldo());
-        gerenciaContas.sacar(conta, 500f);
-        System.out.println("Saldo após o saque: " + conta.getSaldo());
 
     }
 

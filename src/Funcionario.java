@@ -71,12 +71,12 @@ public class Funcionario {
     @Override
     public String toString() {
         return
-                "CPF: " + CPF + "\n" +
-                "Nome: " + nome + "\n" +
-                "ID: " + id + "\n" +
-                "Idade: " + idade + "\n" +
-                "Salário: " + salario + "\n" +
-                "Data Contratação: " + GenericUtils.formatarData(dataContratacao);
+                this.CPF + ";" +
+                this.nome + ";" +
+                this.id + ";" +
+                this.idade + ";" +
+                this.salario + ";" +
+                GenericUtils.formatarDataParaString(dataContratacao);
     }
 
     public static void main(String[] args) {

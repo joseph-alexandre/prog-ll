@@ -6,6 +6,12 @@ public class Conta {
     public Conta() {
     }
 
+    public Conta(String nomeTitular, String numeroConta, Float saldo) {
+        this.nomeTitular = nomeTitular;
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+    }
+
     public String getNomeTitular() {
         return nomeTitular;
     }
@@ -36,9 +42,9 @@ public class Conta {
 
     @Override
     public String toString() {
-        return "Conta: \n" +
-                "Nome do Titular: " + nomeTitular +
-                "\nNúmero da conta: " + numeroConta  +
-                "\nSaldo: " + saldo;
+        return
+                 this.nomeTitular + ";" +
+                 this.numeroConta  + ";" +
+                 this.saldo;
     }
 }
